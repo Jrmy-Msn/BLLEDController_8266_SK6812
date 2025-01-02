@@ -8,12 +8,15 @@ const char *configPath = "/blledconfig.json";
 #include <LittleFS.h>
 #include "types.h"
 
-bool loadFilesystem(){
+bool loadFilesystem()
+{
     File configFile;
     int attempts = 0;
-    while (attempts < 2) {
+    while (attempts < 2)
+    {
         configFile = LittleFS.open(configPath, "r");
-        if (configFile) {
+        if (configFile)
+        {
             break;
         }
         attempts++;
@@ -21,7 +24,8 @@ bool loadFilesystem(){
         delay(3000);
     }
 
-    if (!configFile) {
+    if (!configFile)
+    {
         Serial.println(F("Failed to open Filesystem after 2 retries"));
         return false;
     }
@@ -31,11 +35,12 @@ bool loadFilesystem(){
     std::unique_ptr<char[]> buf(new char[size]);
     configFile.readBytes(buf.get(), size);
 
-    StaticJsonDocument<512> json;
+    JsonDocument json;
 
     auto deserializeError = deserializeJson(json, buf.get());
 
-    if (deserializeError) {
+    if (deserializeError)
+    {
         Serial.println(F("Failed to load Filesystem"));
         return false;
     }
@@ -54,10 +59,11 @@ bool loadFilesystem(){
     return true;
 }
 
-bool saveFilesystem(){
+bool saveFilesystem()
+{
     Serial.println(F("Saving Filesystem"));
 
-    StaticJsonDocument<512> json;
+    JsonDocument json;
     json["printerIp"] = globalVariables.printerIP;
     json["accessCode"] = globalVariables.accessCode;
     json["serialNumber"] = globalVariables.serialNumber;
@@ -67,7 +73,8 @@ bool saveFilesystem(){
 
     File configFile = LittleFS.open(configPath, "w");
 
-    if (!configFile) {
+    if (!configFile)
+    {
         Serial.println(F("Failed to save Filesystem"));
         return false;
     }
@@ -79,9 +86,11 @@ bool saveFilesystem(){
     return true;
 }
 
-void setupFilesystem(){
+void setupFilesystem()
+{
     Serial.println(F("Mounting LittleFS"));
-    if (!LittleFS.begin()) {
+    if (!LittleFS.begin())
+    {
         Serial.println(F("Failed to mount LittleFS"));
         LittleFS.format();
         Serial.println(F("Formatting LittleFS"));
@@ -90,7 +99,8 @@ void setupFilesystem(){
     Serial.println(F("Mounted LittleFS"));
 
     Serial.println(F("Loading Filesystem"));
-    if (!loadFilesystem()){
+    if (!loadFilesystem())
+    {
         LittleFS.remove(configPath);
         saveFilesystem();
     }

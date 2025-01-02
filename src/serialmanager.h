@@ -2,21 +2,26 @@
 #define _SERIALMANAGER
 
 #include <Arduino.h>
-#include <ArduinoJson.h> 
+#include <ArduinoJson.h>
 
 #include "filesystem.h"
 #include "types.h"
 
-void setupSerial(){
-   while (!Serial);
+void setupSerial()
+{
+    while (!Serial)
+        ;
 }
 
-void serialLoop(){
-    if (Serial.available() > 0) {
+void serialLoop()
+{
+    if (Serial.available() > 0)
+    {
         String input = Serial.readStringUntil('\n');
-        DynamicJsonDocument doc(256);
+        JsonDocument doc;
         deserializeJson(doc, input);
-       if (doc.containsKey("ssid") && doc.containsKey("pass")) {
+        if (doc["ssid"].is<int>() && doc["pass"].is<int>())
+        {
             Serial.print("SSID ");
             Serial.println(doc["ssid"].as<String>());
             Serial.print("PASS ");
@@ -35,8 +40,7 @@ void serialLoop(){
 
             saveFilesystem();
             ESP.restart();
-       }
-      
+        }
     };
 }
 

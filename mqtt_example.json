@@ -1,0 +1,307 @@
+{
+    "print": {
+        "ams": {
+            "ams": [
+                {
+                    "humidity": "5",
+                    "id": "0",
+                    "temp": "26.9",
+                    "tray": [
+                        {
+                            "bed_temp": "35",
+                            "bed_temp_type": "1",
+                            "cali_idx": -1,
+                            "cols": [
+                                "AE96D4FF"
+                            ],
+                            "ctype": 0,
+                            "drying_temp": "55",
+                            "drying_time": "8",
+                            "id": "0",
+                            "nozzle_temp_max": "230",
+                            "nozzle_temp_min": "190",
+                            "remain": 42,
+                            "tag_uid": "5AE7B9A600000100",
+                            "tray_color": "AE96D4FF",
+                            "tray_diameter": "1.75",
+                            "tray_id_name": "A01-P4",
+                            "tray_info_idx": "GFA01",
+                            "tray_sub_brands": "PLA Matte",
+                            "tray_type": "PLA",
+                            "tray_uuid": "4971099AFEFB479F92724F81754B0AB6",
+                            "tray_weight": "1000",
+                            "xcam_info": "8813100EE803E8030000003F"
+                        },
+                        {
+                            "bed_temp": "0",
+                            "bed_temp_type": "0",
+                            "cali_idx": -1,
+                            "cols": [
+                                "2D2B28FF"
+                            ],
+                            "ctype": 0,
+                            "drying_temp": "55",
+                            "drying_time": "8",
+                            "id": "1",
+                            "nozzle_temp_max": "230",
+                            "nozzle_temp_min": "190",
+                            "remain": 30,
+                            "tag_uid": "4ACA63BD00000100",
+                            "tray_color": "2D2B28FF",
+                            "tray_diameter": "1.75",
+                            "tray_id_name": "A08-K2",
+                            "tray_info_idx": "GFA08",
+                            "tray_sub_brands": "PLA Sparkle",
+                            "tray_type": "PLA",
+                            "tray_uuid": "1A15ABE928EE462B84564D9D0C2A22FA",
+                            "tray_weight": "1000",
+                            "xcam_info": "A438803EE803E803CDCC4C3F"
+                        },
+                        {
+                            "bed_temp": "0",
+                            "bed_temp_type": "0",
+                            "cali_idx": -1,
+                            "cols": [
+                                "43403DFF"
+                            ],
+                            "ctype": 0,
+                            "drying_temp": "55",
+                            "drying_time": "8",
+                            "id": "2",
+                            "nozzle_temp_max": "230",
+                            "nozzle_temp_min": "190",
+                            "remain": 0,
+                            "tag_uid": "AAAE4AB900000100",
+                            "tray_color": "43403DFF",
+                            "tray_diameter": "1.75",
+                            "tray_id_name": "A02-D2",
+                            "tray_info_idx": "GFA02",
+                            "tray_sub_brands": "PLA Metal",
+                            "tray_type": "PLA",
+                            "tray_uuid": "1F11BA9FF9484D64BBD8A40D293F6F8E",
+                            "tray_weight": "1000",
+                            "xcam_info": "A4383421E803E8036666663F"
+                        },
+                        {
+                            "bed_temp": "0",
+                            "bed_temp_type": "0",
+                            "cali_idx": -1,
+                            "cols": [
+                                "43403DFF"
+                            ],
+                            "ctype": 0,
+                            "drying_temp": "55",
+                            "drying_time": "8",
+                            "id": "3",
+                            "nozzle_temp_max": "230",
+                            "nozzle_temp_min": "190",
+                            "remain": 42,
+                            "tag_uid": "AAAE4AB900000100",
+                            "tray_color": "43403DFF",
+                            "tray_diameter": "1.75",
+                            "tray_id_name": "A02-D2",
+                            "tray_info_idx": "GFA02",
+                            "tray_sub_brands": "PLA Metal",
+                            "tray_type": "PLA",
+                            "tray_uuid": "1F11BA9FF9484D64BBD8A40D293F6F8E",
+                            "tray_weight": "1000",
+                            "xcam_info": "A4383421E803E8036666663F"
+                        }
+                    ]
+                }
+            ],
+            "ams_exist_bits": "1",
+            "ams_exist_bits_raw": "1",
+            "insert_flag": true,
+            "power_on_flag": true,
+            "tray_exist_bits": "f",
+            "tray_is_bbl_bits": "f",
+            "tray_now": "255",
+            "tray_pre": "255",
+            "tray_read_done_bits": "f",
+            "tray_reading_bits": "0",
+            "tray_tar": "255",
+            "version": 3961
+        },
+        "ams_rfid_status": 0,
+        "ams_status": 0,
+        "aux_part_fan": true,
+        "bed_target_temper": 0.0,
+        "bed_temper": 22.0,
+        "big_fan1_speed": "0",
+        "big_fan2_speed": "0",
+        "cali_version": 0,
+        "chamber_temper": 25.0,
+        "command": "push_status",
+        "cooling_fan_speed": "0",
+        "ctt": 0,
+        "device": {
+            "fan": 0,
+            "nozzle": {
+                "0": {
+                    "info": 16,
+                    "temp": 25
+                },
+                "info": 15
+            }
+        },
+        "fail_reason": "0",
+        "fan_gear": 0,
+        "filam_bak": [
+            12
+        ],
+        "force_upgrade": false,
+        "gcode_file": "/data/Metadata/plate_1.gcode",
+        "gcode_file_prepare_percent": "100",
+        "gcode_state": "FINISH",
+        "heatbreak_fan_speed": "0",
+        "hms": [],
+        "home_flag": 6407560,
+        "hw_switch_state": 0,
+        "ipcam": {
+            "agora_service": "disable",
+            "ipcam_dev": "1",
+            "ipcam_record": "enable",
+            "mode_bits": 2,
+            "resolution": "720p",
+            "rtsp_url": "disable",
+            "timelapse": "disable",
+            "tutk_server": "disable"
+        },
+        "job_id": "0",
+        "layer_num": 92,
+        "lights_report": [
+            {
+                "mode": "off",
+                "node": "chamber_light"
+            },
+            {
+                "mode": "flashing",
+                "node": "work_light"
+            }
+        ],
+        "maintain": 3,
+        "mc_percent": 100,
+        "mc_print_error_code": "0",
+        "mc_print_stage": "1",
+        "mc_print_sub_stage": 0,
+        "mc_remaining_time": 0,
+        "net": {
+            "conf": 16,
+            "info": [
+                {
+                    "ip": 369207488,
+                    "mask": 16777215
+                },
+                {
+                    "ip": 0,
+                    "mask": 0
+                }
+            ]
+        },
+        "nozzle_diameter": "0.6",
+        "nozzle_target_temper": 0.0,
+        "nozzle_temper": 25.0,
+        "nozzle_type": "hardened_steel",
+        "online": {
+            "ahb": false,
+            "ext": false,
+            "version": 4
+        },
+        "print_error": 0,
+        "print_gcode_action": 255,
+        "print_real_action": 0,
+        "print_type": "local",
+        "profile_id": "",
+        "project_id": "0",
+        "queue_est": 0,
+        "queue_number": 0,
+        "queue_sts": 0,
+        "queue_total": 0,
+        "s_obj": [],
+        "sdcard": true,
+        "sequence_id": "2021",
+        "spd_lvl": 2,
+        "spd_mag": 100,
+        "stg": [
+            2,
+            14,
+            1,
+            8
+        ],
+        "stg_cur": -1,
+        "subtask_id": "",
+        "subtask_name": "BambuLab AMS Desiccant Tray w/ OEM lid",
+        "task_id": "4003",
+        "total_layer_num": 92,
+        "upgrade_state": {
+            "ahb_new_version_number": "",
+            "ams_new_version_number": "",
+            "consistency_request": false,
+            "dis_state": 0,
+            "err_code": 0,
+            "ext_new_version_number": "",
+            "force_upgrade": false,
+            "idx": 4,
+            "idx1": 0,
+            "lower_limit": "00.00.00.00",
+            "message": "",
+            "module": "",
+            "new_version_state": 2,
+            "ota_new_version_number": "",
+            "progress": "0",
+            "sequence_id": 0,
+            "sn": "00M09D482400534",
+            "status": "IDLE"
+        },
+        "upload": {
+            "file_size": 0,
+            "finish_size": 0,
+            "message": "Good",
+            "oss_url": "",
+            "progress": 0,
+            "sequence_id": "0903",
+            "speed": 0,
+            "status": "idle",
+            "task_id": "",
+            "time_remaining": 0,
+            "trouble_id": ""
+        },
+        "vt_tray": {
+            "bed_temp": "0",
+            "bed_temp_type": "0",
+            "cali_idx": -1,
+            "cols": [
+                "161616FF"
+            ],
+            "ctype": 0,
+            "drying_temp": "0",
+            "drying_time": "0",
+            "id": "254",
+            "nozzle_temp_max": "250",
+            "nozzle_temp_min": "200",
+            "remain": 0,
+            "tag_uid": "0000000000000000",
+            "tray_color": "161616FF",
+            "tray_diameter": "0.00",
+            "tray_id_name": "",
+            "tray_info_idx": "GFU99",
+            "tray_sub_brands": "",
+            "tray_type": "TPU",
+            "tray_uuid": "00000000000000000000000000000000",
+            "tray_weight": "0",
+            "xcam_info": "000000000000000000000000"
+        },
+        "wifi_signal": "-53dBm",
+        "xcam": {
+            "allow_skip_parts": false,
+            "buildplate_marker_detector": true,
+            "first_layer_inspector": false,
+            "halt_print_sensitivity": "medium",
+            "print_halt": true,
+            "printing_monitor": true,
+            "spaghetti_detector": true
+        },
+        "xcam_status": "0"
+    }
+}
