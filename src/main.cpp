@@ -13,24 +13,24 @@ void setup()
     Serial.println(ESP.getFreeHeap());
 
     setupLeds();
-    tweenToColor(255, 255, 255, 255, 255, 500);
+    tweenToColor(255, 255, 255, 255);
     delay(2000);
-    tweenToColor(255, 0, 0, 0, 0, 500);
+    tweenToColor(255, 0, 0, 0);
     setupFilesystem();
     setupSerial();
 
     delay(2000);
-    tweenToColor(255, 165, 0, 0, 0, 500);
+    tweenToColor(255, 165, 0, 0);
 
     if (!setupWifi())
     {
-        tweenToColor(255, 0, 255, 0, 0, 500);
+        tweenToColor(255, 0, 255, 0);
         return;
     };
     delay(2000);
-    tweenToColor(0, 0, 255, 0, 0, 500);
+    tweenToColor(0, 0, 255, 0);
     setupMqtt();
-    tweenToColor(0, 0, 0, 0, 0, 500);
+    tweenToColor(0, 0, 0, 0);
 }
 
 void loop()

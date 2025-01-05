@@ -231,35 +231,43 @@ void ParseCallback(char *topic, byte *payload, unsigned int length)
 {
     JsonDocument filter = getMqttPayloadFilter();
     JsonDocument messageobject;
-    DeserializationError deserializeError = deserializeJson(messageobject, payload, DeserializationOption::Filter(filter));
-
-    Serial.println(F("------------ MQTT MESSAGE ------------"));
-
-    Serial.print(F("FreeHeap: "));
-    Serial.println(ESP.getFreeHeap());
-    Serial.print(F("DeserializeError : "));
-    Serial.println(deserializeError.c_str());
-    if (!deserializeError)
+    stream.find("\"print\":[");
+    do
     {
-
-        Serial.println(F("Mqtt payload:"));
-        Serial.println();
-        serializeJson(messageobject, Serial);
-        Serial.println();
-
-        if (handle_message(messageobject))
+        DeserializationError deserializeError = deserializeJson(messageobject, payload, DeserializationOption::Filter(filter));
+        if (messageobject.overflowed())
         {
-            Serial.println(F("Updating from mqtt"));
-            updateleds();
+            Serial.println(F("---------> JSON OVREFLOW"));
         }
-    }
-    else
-    {
-        Serial.println(F("Deserialize error while parsing mqtt"));
-    }
 
-    Serial.println(F("------------ END MQTT MESSAGE ------------"));
-    Serial.println();
+        Serial.println(F("------------ MQTT MESSAGE ------------"));
+
+        Serial.print(F("FreeHeap: "));
+        Serial.println(ESP.getFreeHeap());
+        Serial.print(F("DeserializeError : "));
+        Serial.println(deserializeError.c_str());
+        if (!deserializeError)
+        {
+
+            Serial.println(F("Mqtt payload:"));
+            Serial.println();
+            serializeJson(messageobject, Serial);
+            Serial.println();
+
+            if (handle_message(messageobject))
+            {
+                Serial.println(F("Updating from mqtt"));
+                updateleds();
+            }
+        }
+        else
+        {
+            Serial.println(F("Deserialize error while parsing mqtt"));
+        }
+
+        Serial.println(F("------------ END MQTT MESSAGE ------------"));
+        Serial.println();
+    } while (stream.findUntil(",", "]"));
 }
 
 void mqttCallback(char *topic, byte *payload, unsigned int length)
